@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículum - Estilo John Wick</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Prata&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(45deg, #121212 25%, #1c1c1c 75%);
+            color: #e5e5e5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .sidebar {
+            background-color: #1a1a1a;
+            width: 300px;
+            padding: 20px;
+            box-shadow: 4px 0 8px rgba(0, 0, 0, 0.5);
+            position: fixed;
+            height: 100vh;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .sidebar h1 {
+            font-family: 'Prata', serif;
+            font-size: 2em;
+            color: #d4af37;
+            border-bottom: 2px solid #444;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+        }
+
+        .sidebar p {
+            font-size: 1em;
+            color: #aaa;
+        }
+
+        .sidebar button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #d4af37;
+            color: #121212;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .sidebar button:hover {
+            background-color: #f1f1f1;
+        }
+
+        .main-content {
+            margin-left: 320px;
+            width: calc(100% - 320px);
+            padding: 20px;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #1a1a1a;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            border: 1px solid #3c3c3c;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        section h2 {
+            font-size: 1.8em;
+            font-family: 'Prata', serif;
+            border-bottom: 1px solid #444;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            color: #d4af37;
+        }
+
+        section p {
+            line-height: 1.6;
+            color: #e5e5e5;
+        }
+
+        .timeline {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .timeline li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .timeline span {
+            font-weight: bold;
+            margin-right: 10px;
+            color: #d4af37;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #1a1a1a;
+            border-top: 1px solid #5a5a5a;
+            font-size: 0.9em;
+            color: #aaa;
+            transition: color 0.3s ease;
+        }
+
+        footer p:hover {
+            color: #f1f1f1;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-320px);
+                z-index: 999;
+            }
+
+            .main-content {
+                margin: 0;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h1>JOHN WICK</h1>
+        <p>Profesional en alta seguridad</p>
+        <p>john.wick@example.com</p>
+        <p>Teléfono: +1 555 0123</p>
+        <button>Descargar CV</button>
+    </div>
+    <div class="main-content">
+        <section>
+            <h2>Perfil</h2>
+            <p>Profesional experimentado en alta seguridad y resolución de conflictos. Con habilidad estratégica y enfoque en resultados.</p>
+        </section>
+        <section>
+            <h2>Experiencia</h2>
+            <ul class="timeline">
+                <li><span>2019:</span> Asesor de seguridad - Resolución de conflictos</li>
+                <li><span>2021:</span> Operativo estratégico en situaciones críticas</li>
+                <li><span>2023:</span> Líder en manejo de crisis globales</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Educación</h2>
+            <p>Información sobre estudios y certificaciones.</p>
+        </section>
+        <footer>
+            <p>Todos los derechos reservados | Estilo inspirado en John Wick</p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+<p>
+                ¡Hola! Soy José, Ingeniero en Mantenimiento Industrial con experiencia práctica en calidad, seguridad laboral, auditoría interna y soporte técnico. 
+                Me he desempeñado como Ingeniero de Servicio Técnico, Planificador de Servicios, y he colaborado en proyectos enfocados en el desarrollo de la calidad, 
+                seguridad e higiene, y auditorías internas, aplicando metodologías normativas y de mejora continua.
+                Mi formación incluye certificaciones en Lean Manufacturing, Six Sigma (Black Belt, Green Belt, White Belt), 
+                auditoría interna IATF 16949:2016 e ISO 9001:2015, y herramientas como Core Tools y 8D.
+            </p>
+            <p> 
+                También he complementado mi perfil técnico con cursos de programación web, lógica de programación en JavaScript, 
+                control de versiones con Git y GitHub, y estoy desarrollando competencias en ciencia de datos, incluyendo análisis estadístico, normalización, 
+                y técnicas de balanceo de clases.
+            </p>
+            <p>
+                Además, he reforzado mi desarrollo profesional con programas enfocados en liderazgo, agilidad, transición de carrera al campo tecnológico, 
+                emprendimiento, y hábitos de productividad. Estas habilidades me permiten no solo aplicar conocimiento técnico, sino también liderar, comunicar y 
+                adaptarme a entornos dinámicos.
+            </p>
+            <p>
+                Me caracteriza una combinación única entre disciplina, creatividad y curiosidad. Integro soluciones estructuradas con una visión moderna, orientada a resultados. 
+                Ya sea optimizando procesos, diseñando sitios web responsivos o creando visualizaciones de datos impactantes, mi objetivo es transformar ideas en valor.
+            </p>

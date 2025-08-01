@@ -1,0 +1,389 @@
+/* Variables globales */
+:root {
+    --color-bg-dark:            #1a1a1a;
+    --color-bg-gradient:        linear-gradient(45deg, #121212 25%, #1c1c1c 75%);
+    --color-text-primary:      #d4af37;
+    --color-text-secondary:    #aaa;
+    --color-text-light:        #e5e5e5;
+    --color-border:            #444;
+    --color-hover-bg:          #d4af37;
+    --color-hover-text:        #121212;
+    --font-primary:            'Roboto', sans-serif;
+    --font-secondary:          'Prata', serif;
+    --font-accent:             'Cinzel', serif;
+    --box-shadow:              0 0 10px rgba(0, 0, 0, 0.5);
+    --transition:              0.3s ease;
+    --border-radius:           5px;
+    --padding-default:         10px;
+    --padding-large:           20px;
+    --margin-default:          20px;
+    --margin-large:            50%;
+    --gap-default:             1em;
+    --gap-large:               100%;
+    --width-sidebar:           300px;
+    --width-profile:           800px;
+    --width-experience-card:   60%;
+    --height-auto:             auto;
+    --height-min-content:      min-content;
+    --height-full:             100vh;
+    --font-size-default:       1em;
+    --font-size-large:         1.2em;
+    --font-size-title:         2em;
+    --font-size-subtitle:      1.8em;
+    --font-size-small:         0.8em;
+    --animation-duration:      2s;
+}
+
+/* Sidebar texto */
+.sidebar {
+    background-color:          var(--color-bg-dark);
+    width:                     var(--width-sidebar);
+    padding:                   var(--padding-large);
+    box-shadow:                4px 0 8px rgba(0, 0, 0, 0.5);
+    position:                  fixed;
+    height:                    var(--height-full);
+    text-align:                center;
+    flex-direction:            column;
+    z-index:                   1000;
+}
+
+.sidebar h1 {
+    font-family:               var(--font-secondary);
+    font-size:                 var(--font-size-title);
+    color:                     var(--color-text-primary);
+    border-bottom:             2px solid var(--color-border);
+    margin-bottom:             var(--margin-default);
+    padding-bottom:            var(--padding-default);
+}
+
+.sidebar p {
+    font-size:                 var(--font-size-default);
+    color:                     var(--color-text-secondary);
+    margin-bottom:             var(--margin-large);
+    line-height:               1.5;
+}
+
+/* Sidebar links menú */
+.links-grid_slidebar a {
+    display:                   flex;
+    margin-left:               10%;
+    align-items:               center;
+    justify-content:           center;
+    flex-direction:            column;
+    text-align:                center;
+    padding:                   var(--padding-default);
+    width:                     75%;
+    text-decoration:           none;
+    color:                     var(--color-text-primary);
+    background-color:          var(--color-bg-dark);
+    border-radius:             var(--border-radius);
+    border:                    1px solid var(--color-border);
+    transition:                background-color var(--transition), color var(--transition);
+    margin-bottom:             auto;
+    margin-top:                10%;
+}
+
+.links-grid_slidebar a:hover {
+    background-color:          var(--color-hover-bg);
+    color:                     var(--color-hover-text);
+}
+
+/* Sidebar íconos de hipervínculos externos */
+.presentacion__enlaces__titulo {
+    font-size:                 var(--font-size-large);
+    color:                     var(--color-text-primary);
+    font-family:               var(--font-secondary);
+    flex-direction:            column;
+    margin-top:                40%;
+}
+
+.presentacion__enlaces {
+    text-align:               center;
+    flex-direction:           row;
+    display:                  flex;
+    justify-content:          center;
+    position:                 relative;
+}
+
+.presentacion__enlaces__link1, .presentacion__enlaces__link2 {
+    display:                   flex;
+    flex-direction:            row;
+    align-items:               center;
+    justify-content:           center;
+    text-decoration:           none;
+    color:                     var(--color-text-primary);
+    background-color:          var(--color-bg-dark);
+    border-radius:             var(--border-radius);
+    padding:                   var(--padding-default);
+    margin-bottom:             30px;
+    transition:                background-color var(--transition), color var(--transition);
+    gap:                       var(--gap-large);
+}
+
+.presentacion__enlaces__link1 img, .presentacion__enlaces__link2 img {
+    width:                     25px;
+    height:                    25px;
+    margin-right:              10px;
+}
+
+.presentacion__enlaces__link1:hover, .presentacion__enlaces__link2:hover {
+    transform:                 scale(1.1);
+}
+
+/* Estilo de datos de contacto personal */
+.contacto p {
+    text-align:                center;
+    flex-direction:            column;
+    display:                   flex;
+    justify-content:           center;
+    position:                  relative;
+    margin-top:                8%;
+    margin-bottom:             20%;
+    padding:                   var(--padding-default);
+    background-color:          var(--color-bg-dark);
+    gap:                       var(--gap-default);
+}
+
+/* Estilo del contenido central layout */
+.main-content {
+    flex:                      1;
+    margin-left:               35%;
+    padding:                   var(--padding-large);
+    align-items:               center;
+    display:                   block;
+    flex-direction:            column;
+    justify-content:           center;
+    min-height:                89vh;
+}
+
+body {
+    font-family:               var(--font-primary);
+    background:                var(--color-bg-gradient);
+    color:                     var(--color-text-light);
+    margin:                    0;
+    margin-bottom:             0;
+    flex:                      1 0 auto;
+    padding:                   0;
+    box-sizing:                border-box;
+    flex-direction:            column;
+    height:                    var(--height-min-content);
+    overflow-y:                auto;
+    align-items:               center;
+    height:                    fit-content;
+    overflow-x:                hidden;
+    display:                   inline;
+}
+
+/* Estilo del texto central parte del perfil */
+.profile {
+    background-color:          var(--color-bg-dark);
+    padding:                   var(--padding-large);
+    border-radius:             var(--border-radius);
+    box-shadow:                var(--box-shadow);
+    border:                    1px solid var(--color-border);
+    transition:                transform var(--transition);
+    max-width:                 var(--width-profile);
+    margin-bottom:             2%;
+    margin-top:                0%;
+    height:                    var(--height-min-content);
+    display:                   block;
+    flex-direction:            column;
+    align-items:               center;
+    justify-content:           center;
+}
+
+.profile h2 {
+    font-family:               var(--font-secondary);
+    font-size:                 var(--font-size-subtitle);
+    color:                     var(--color-text-primary);
+    border-bottom:             2px solid var(--color-border);
+    margin-bottom:             var(--margin-default);
+}
+
+.profile p {
+    font-size:                 var(--font-size-default);
+    line-height:               1.6;
+    color:                     var(--color-text-light);
+    margin-bottom:             var(--margin-default);
+    gap:                       10px;
+    font-family:               var(--font-primary);
+}
+
+/* Estilo de la sección de experiencia y educación */
+.experiencia_educacion-grid {
+    display:                   grid;
+    grid-template-columns:     repeat(3, 2fr);
+    gap:                       var(--margin-default);
+    margin:                    auto;
+    flex-direction:            row;
+    align-items:               row;
+    justify-items:             center;
+    justify-content:           center;
+    margin-left:               32%;
+    width:                     10%;
+}
+
+.experiencia_educacion-grid a {
+    display:                   block;
+    text-align:                center;
+    padding:                   var(--padding-default);
+    text-decoration:           none;
+    color:                     var(--color-text-primary);
+    background-color:          var(--color-bg-dark);
+    border-radius:             var(--border-radius);
+    border:                    1px solid var(--color-border);
+    transition:                background-color var(--transition), color var(--transition);
+}
+
+/* Estilo de los enlaces de experiencia y educación */
+.container {
+    display:                   fixed;
+    margin-left:               0%;
+    grid-template-columns:     repeat(1, 1fr);
+    max-width:                 805px;
+}
+
+.experiencia_educacion_card {
+    background-color:          var(--color-bg-dark);
+    border-radius:             var(--border-radius);
+    box-shadow:                var(--box-shadow);
+    transition:                transform var(--transition);
+    cursor:                    pointer;
+    flex:                      1;
+    text-align:                center;
+    color:                     var(--color-text-primary);
+    font-family:               var(--font-secondary);
+    border:                    1px solid var(--color-border);
+    height:                    40%;
+    padding:                   var(--padding-large);
+    width:                     60%;
+    display:                   flex;
+    align-items:               center;
+    justify-content:           center;
+    font-size:                 var(--font-size-small);
+}
+
+.experiencia_educacion_card:hover {
+    transform:                 scale(1.05);
+    background-color:          var(--color-hover-bg);
+    color:                     var(--color-hover-text);
+    transition:                all var(--transition);
+}
+
+/* Estilo del texto al dar click de experiencia y educación */
+.experiencia_edu {
+    opacity:                   1;
+    transform:                 translateY(-50px);
+    transition:                opacity 0.9s ease, transform 0.9s ease;
+    margin-top:                var(--margin-default);
+    background-color:          var(--color-bg-dark);
+    padding:                   var(--padding-large);
+    border-radius:             8px;
+    box-shadow:                var(--box-shadow);
+    border:                    1px solid var(--color-border);
+    max-width:                 900px;
+    width:                     100%;
+    text-align:                left;
+    position:                  relative;
+    z-index:                   1;
+    display:                   none;
+    flex-direction:            column;
+    align-items:               center;
+    height:                    auto;
+    margin-bottom:             var(--margin-default);
+    box-sizing:                border-box;
+    font-family:               var(--font-primary);
+    font-size:                 var(--font-size-default);
+    line-height:               1.6;
+    color:                     var(--color-text-primary); 
+}
+
+.experiencia_edu.mostrar {
+    display:                   flex;
+    opacity:                   1;
+    transform:                 translateY(0);
+}
+
+.experiencia_edu h3 {
+    font-family:               var(--font-secondary);
+    font-size:                 1.5em;
+    color:                     var(--color-text-primary);
+    border-bottom:             2px solid var(--color-border);
+    margin-bottom:             var(--margin-default);
+    text-align:                left;
+    width:                     100%;
+}
+
+.experiencia_edu p {
+    font-size:                 var(--font-size-default);
+    line-height:               1.6;
+    color:                     var(--color-text-light);
+    margin-bottom:             var(--margin-default);
+    text-align:                left;
+}
+
+/* Estilo del footer */
+footer {
+  width:                    100%;
+  text-align:               center;
+  padding:                  var(--spacing-sm);
+  box-shadow:               0 -2px 5px rgba(0, 0, 0, 0.1);
+  background-color:         var(--color-border);
+  background-color:         var(--color-bg-dark);
+  border-top:               1px solid var(--color-border-footer);
+  color:                    var(--color-text-muted);
+  position:                 relative;
+  left:                     0;
+  bottom:                   0;
+  display:                  flex;
+  flex-direction:           column;
+  align-items:              center;
+  justify-content:          center;
+  margin-top:               0;
+  margin-bottom:            0;
+  padding:                  var(--padding-default);
+  box-sizing:               border-box;
+  height:                   var(--height-auto);
+  padding:                  var(--padding-default);
+  background:               var(--color-bg-dark);
+  border-top:               1px solid var(--color-border-footer);
+}
+
+footer p {
+    margin-left:               20%;
+    font-size:                 var(--font-size-small);
+}
+
+.frase-inspiradora {
+    background:                linear-gradient(to right, #0f2027, #203a43, #0f2027);
+    color:                     #fff;
+    padding:                   fit-content;
+    border-radius:             8px;
+    text-align:                center;
+    margin:                    auto;
+    box-shadow:                0 8px 20px rgba(0, 0, 0, 0.4);
+    width:                     fit-content;
+}
+
+.frase-inspiradora blockquote p {
+    font-size:                 1rem;
+    font-family:               var(--font-accent);
+    letter-spacing:            fit-content;
+    line-height:               1.5;
+    text-shadow:               2px 2px 4px #000;
+}
+
+.frase-inspiradora {
+    animation:                 fadeInUp var(--animation-duration) ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity:               0;
+        transform:             translateY(20px);
+    }
+    to {
+        opacity:               1;
+        transform:             translateY(0);
+    }
+}
