@@ -18,7 +18,6 @@
 ## 🎨 Diseño y tecnología
 
 - **Frontend**: HTML, CSS y JavaScript personalizados.
-- **Responsive y accesible**: Navegación adaptable.
 - **GitHub integrado**: Documentación interactiva y código limpio.
 
 ---
